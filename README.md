@@ -1,4 +1,4 @@
-# REFACTORING
+# DEV
 # Шаблонизатор Саммари формы
 
-[DEMO](https://templater-refactoring.vercel.app)
+[DEMO](https://templator-dev.vercel.app)
