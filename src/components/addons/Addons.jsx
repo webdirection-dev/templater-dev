@@ -1,19 +1,16 @@
-import {useSelector} from 'react-redux'
-import {selectPanelAddonsInfo} from '../../features/panelAddons/panel-addons-slice'
 import './addons.css'
-import StaffSummary from '../../features/staff/StaffSummary'
 import PanelAddons from '../../features/panelAddons/PanelAddons'
-import Info from '../info/Info'
-import Mi from '../mi/Mi'
+import StaffSummary from '../../features/staff/StaffSummary'
+import Mi from '../../features/mi/Mi'
+import {useAddons} from './useAddons'
 
 const Addons = ({setAlert}) => {
-    const {start, staff, mi, info} = useSelector(store => selectPanelAddonsInfo(store).data)
-    const heightWrap = staff ? '223px' : mi ? '400px' : '500px'
+    const {start, staff, mi, styleAddons} = useAddons()
+
     return(
-        <div className="addons" style={{height: heightWrap}}>
+        <div className="addons" style={styleAddons}>
             <StaffSummary setAlert={setAlert} start={start} staff={staff}/>
-            <Info start={start} info={info}/>
-            <Mi start={start} mi={mi}/>
+            <Mi setAlert={setAlert} start={start} mi={mi}/>
             <PanelAddons />
         </div>
     )

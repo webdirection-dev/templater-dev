@@ -1,7 +1,7 @@
 import './header.css'
 
 const Header = () => (
-    <nav className='blue-grey darken-2 header'>
+    <nav id='header' className='blue-grey darken-2 header'>
         <div className="nav-wrapper">
             <a href="./" className="brand-logo">DUTY</a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">

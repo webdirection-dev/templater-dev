@@ -12,7 +12,6 @@ body {
 #nums_1 {padding:100px}
 
 .content {
-  min-height: calc(100vh - 64px - 94px - 65px + 1px);
   padding: 1.5rem 0;
   width: 100% !important;
   max-width: 98% !important;
@@ -275,12 +274,7 @@ body {
 }
 
 .card-opacity {
-  transition: all .25s !important;
-  opacity: 0;
-}
-
-.card-opacity {
-  animation: card-opacity .25s ease-in-out both;
+  animation: card-opacity .4s ease-in-out both;
 }
 
 @keyframes card-opacity {

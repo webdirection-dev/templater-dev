@@ -106,6 +106,10 @@ const DataForItem = {
             label: 'Средний',
             value: 'Средний',
         },
+        {
+            label: 'Низкий',
+            value: 'Низкий',
+        },
     ],
 
     effect: [

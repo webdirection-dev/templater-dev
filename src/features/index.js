@@ -7,6 +7,7 @@ import {updateReducer} from './update/update-slice'
 import {staffReducer} from './staff/staff-slice'
 import {closingReducer} from './closing/closing-slice'
 import {panelAddonsReducer} from './panelAddons/panel-addons-slice'
+import {miReducer} from './mi/mi-slice'
 
 const rootReducer = combineReducers({
     controlReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     staffReducer,
     closingReducer,
     panelAddonsReducer,
+    miReducer,
 })
 
 export const store = configureStore({

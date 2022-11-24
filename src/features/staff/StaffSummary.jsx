@@ -10,6 +10,7 @@ const StaffSummary = ({setAlert, start, staff}) => {
 
     return(
         <div
+            id='staff'
             className={start ? 'card blue-grey darken-1' : !start && staff ? 'card blue-grey darken-1 card-opacity' : 'hide'}
         >
             <div className="card-content white-text summary-head">

@@ -1,0 +1,55 @@
+.mi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.mi-select {
+    width: 100px;
+    height: 30px;
+    font-size: 15px !important;
+    padding: 0 0 0 5px !important;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+    margin-left: 10px;
+}
+
+.mi-input-label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    margin-right: 10px !important;
+}
+
+#miNumber {
+    height: 30px;
+    width: 90px;
+    background-color: #eef1f2;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+.mi-number {
+    display: flex;
+    align-items: center;
+}
+
+.mi-body {
+    padding-top: 10px;
+}
+
+.mi-input {
+    margin-top: 20px;
+}
+
+.mi-dev-name {
+    color: white;
+    font-size: 18px !important;
+}
+
+.mi-dev-label {
+    display: flex;
+    align-items: center;
+}

@@ -4,9 +4,9 @@ const initialState = {
     data: {
         start: true,
         staff: true,
-        mi: false,
-        info: false,
-    }
+        mi: false
+    },
+    withAnimation: true,
 }
 
 const panelAddonsSlice = createSlice({
@@ -23,16 +23,20 @@ const panelAddonsSlice = createSlice({
             state.data = {start: false, staff: false, mi: true, info: false}
         },
 
-        setInfoAddons: (state, action) => {
-            state.data = {start: false, staff: false, mi: false, info: true}
+        setAnimation: (state, action) => {
+            state.withAnimation = action.payload
         },
     }
 })
 
-export const {resetPanel, setStaffAddons, setMiAddons, setInfoAddons} = panelAddonsSlice.actions
+export const {resetPanel, setStaffAddons, setMiAddons, setAnimation} = panelAddonsSlice.actions
 export const panelAddonsReducer = panelAddonsSlice.reducer
 
 //selectors
 export const selectPanelAddonsInfo = (state) => ({
     data: state.panelAddonsReducer.data,
+})
+
+export const selectStyleAddons = (state) => ({
+    withAnimation: state.panelAddonsReducer.withAnimation,
 })

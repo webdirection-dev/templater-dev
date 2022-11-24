@@ -8,7 +8,7 @@ const ControlPanel = () => {
     const {setStand, setQualities, setSelectTG, setSelectPriority, setSelectEffect} = useControlPanel()
 
     return(
-        <div className="control-panel">
+        <div id='control' className="control-panel">
             <div className="control-panel__select">
                 <label htmlFor='stand' className='control-panel__label bot-stand'> Контур </label>
 
