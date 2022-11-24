@@ -10,7 +10,7 @@ export const useCopyMi = ({stand, tg, priority, support, dev, miNumber, title, d
         `\n**${support} завела массовый инцидент** MI${miNumber}.` +
         `\n**Приоритет:** ${priority}` +
         `\n**Контур:** ${standOut}` +
-        `\n**TG:** ${printTgTxt}` +
+        `\n**ТГ:** ${printTgTxt}` +
         `\n` +
         `\n**${title}**` +
         `\n` +
