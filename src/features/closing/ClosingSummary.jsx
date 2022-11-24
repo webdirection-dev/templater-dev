@@ -32,7 +32,7 @@ const ClosingSummary = ({setAlert}) => {
             <div className="card-content white-text summary-head">
 
                 <div className="summary__checkbox-content">
-                    <span className={isInside ? 'card-title amber-text text-lighten-3' : 'hide'}>{isInside ? 'ВНУТРЕННИЙ' : null}</span>
+                    <span className={isInside ? 'card-title' : 'hide'}>{isInside ? 'ВНУТРЕННИЙ' : null}</span>
                     <span className="card-title">Инцидент ЗАКРЫТ</span>
                 </div>
 
