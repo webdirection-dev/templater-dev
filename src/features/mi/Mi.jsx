@@ -18,12 +18,17 @@ const Mi = ({setAlert, start, mi}) => {
 
             <div className="card-action">
                 <form className='mi-header'>
-                    <label htmlFor="miSupport" className='mi-input-label'>2ЛП:
-                        <select id='miSupport' name='miSupport' className='browser-default mi-select' onChange={handleChange}>
-                            <option value="2ЛП ГИС МТ">ГИСМТ</option>
-                            <option value="2ЛП МДЛП">МДЛП</option>
-                        </select></label>
+                    <select id='miSupport' name='miSupport' className='browser-default mi-select' onChange={handleChange}>
+                        <option value="2ЛП ГИС МТ">2ЛП ГИСМТ</option>
+                        <option value="2ЛП МДЛП">2ЛП МДЛП</option>
+                    </select>
 
+
+                    {/*<label htmlFor="miSupport" className='mi-input-label'>2ЛП:*/}
+                    {/*    <select id='miSupport' name='miSupport' className='browser-default mi-select' onChange={handleChange}>*/}
+                    {/*        <option value="2ЛП ГИС МТ">ГИСМТ</option>*/}
+                    {/*        <option value="2ЛП МДЛП">МДЛП</option>*/}
+                    {/*    </select></label>*/}
 
                     <div className="mi-number">
                         <label htmlFor="miNumber" className='mi-input-label'>MI:</label>
@@ -66,7 +71,6 @@ const Mi = ({setAlert, start, mi}) => {
                         onChange={handleChange}
                     />
                 </form>
-
             </div>
 
             <div className="txt-out__card-footer">
