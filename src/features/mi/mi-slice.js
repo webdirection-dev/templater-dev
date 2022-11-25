@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
+import {miDesc, miDescDev} from '../../static/data/dataMi'
 
 const initialState = {
     data: {
@@ -6,9 +7,7 @@ const initialState = {
         dev: false,
         miNumber: '00001800',
         title: '',
-        description:
-            'Массовый инцидент передан N. Заведена задача на разработку N.\n' +
-            'На данный момент зафиксировано N обращений от УОТ.',
+        description: miDesc
     }
 }
 

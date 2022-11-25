@@ -4,6 +4,7 @@ import {selectControlInfo} from '../control/control-slice'
 import {setSupport, setDev, setNumber, setTitle, setDescription, selectMiInfo} from './mi-slice'
 import {setAnimation} from '../panelAddons/panel-addons-slice'
 import {useCopyMi} from './use-copy-mi'
+import {miDesc, miDescDev, txtConfirm} from '../../static/data/dataMi'
 
 export const useMi = () => {
     const dispatch = useDispatch()
@@ -16,23 +17,23 @@ export const useMi = () => {
         const {name, value} = e.target
 
         if (name === 'miSupport') dispatch(setSupport(value))
-        if (name === 'miDev') dispatch(setDev())
         if (name === 'miNumber' && value.length <= 8) dispatch(setNumber(value))
         if (name === 'miTitle') dispatch(setTitle(value))
         if (name === 'miDescription') dispatch(setDescription(value))
+
+        if (name === 'miDev') {
+            if (description.trim() !== miDesc && description.trim() !== miDescDev) {
+                if (window.confirm(txtConfirm)) {
+                    if (window.confirm('Точно продолжить?!')) dispatch(setDev())
+                }
+            }
+            else dispatch(setDev())
+        }
     }
 
     useEffect(() => {
-        const desc =
-            'Массовый инцидент передан N.\n' +
-            'На данный момент зафиксировано N обращений от УОТ.'
-
-        const descDev =
-            'Массовый инцидент передан N. Заведена задача на разработку N.\n' +
-            'На данный момент зафиксировано N обращений от УОТ.'
-
-        if (dev) dispatch(setDescription(descDev))
-        else dispatch(setDescription(desc))
+        if (dev) dispatch(setDescription(miDescDev))
+        else dispatch(setDescription(miDesc))
     }, [dev])
 
     return {support, dev, miNumber, title, description, handleChange, copySummary}
