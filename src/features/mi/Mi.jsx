@@ -87,6 +87,7 @@ const Mi = ({setAlert, start, mi}) => {
                             <input
                                 type="text"
                                 name="miToDev"
+                                value={toDev}
                                 className='browser-default'
                                 onChange={handleChange}
                             />
