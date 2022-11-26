@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {miDesc, miDescDev} from '../../static/data/dataMi'
 
 const initialState = {
     data: {
@@ -7,7 +6,9 @@ const initialState = {
         dev: false,
         miNumber: '00001800',
         title: '',
-        description: miDesc
+        toGo: '',
+        toDev: '',
+        calls: '',
     }
 }
 
@@ -33,13 +34,21 @@ const miSlice = createSlice({
             state.data.title = action.payload
         },
 
-        setDescription: (state, action) => {
-            state.data.description = action.payload
+        setToGo: (state, action) => {
+            state.data.toGo = action.payload
+        },
+
+        setToDev: (state, action) => {
+            state.data.toDev = action.payload
+        },
+
+        setCalls: (state, action) => {
+            state.data.calls = action.payload
         },
     }
 })
 
-export const {setSupport, setDev, setNumber, setTitle, setDescription} = miSlice.actions
+export const {setSupport, setDev, setNumber, setTitle, setToGo, setToDev, setCalls} = miSlice.actions
 export const miReducer = miSlice.reducer
 
 //selectors
