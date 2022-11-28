@@ -1,9 +1,9 @@
 import {useDispatch, useSelector} from 'react-redux'
-import {selectControlInfo} from '../control/control-slice'
-import {setSupport, setDev, setNumber, setTitle, setToGo, setToDev, setCalls, selectMiInfo} from './mi-slice'
-import {setAnimation} from '../panelAddons/panel-addons-slice'
+import {selectControlInfo} from '../../control/control-slice'
+import {setSupport, setDev, setNumber, setTitle, setToGo, setToDev, setCalls, selectMiInfo} from '../mi-slice'
+import {setAnimation} from '../../panelAddons/panel-addons-slice'
 import {useCopyMi} from './use-copy-mi'
-import {sortTg} from '../../static/helpers/var'
+import {sortTg} from '../../../static/helpers/var'
 
 export const useMi = () => {
     const dispatch = useDispatch()

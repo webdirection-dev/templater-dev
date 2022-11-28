@@ -1,6 +1,6 @@
 import './mi.css'
 import TextareaAutosize from 'react-textarea-autosize'
-import {useMi} from './use-mi'
+import {useMi} from './hooks/use-mi'
 
 const Mi = ({setAlert, start, mi}) => {
     const {stand, tg, priority, dev, support, miNumber, title, toGo, toDev, calls, handleChange, copySummary} = useMi()
